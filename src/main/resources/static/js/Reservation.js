@@ -1,4 +1,4 @@
-const BASE_URL='Http://152.70.153.10:81'
+const BASE_URL='Http://150.136.245.151:81'
 function MostrarInformacionReservation(){
      $.ajax({
         url: BASE_URL+"/api/Reservation/all",
