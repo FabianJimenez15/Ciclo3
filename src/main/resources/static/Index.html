@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!---->
+
+
+<html>
+    <head >
+        <title>Skates</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+            <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+
+        <script type="text/javascript" src="js/Category.js"></script>
+        <script type="text/javascript" src="js/Skate.js"></script>
+        <script type="text/javascript" src="js/Client.js"></script>
+        <script type="text/javascript" src="js/Message.js "></script>
+        <script type="text/javascript" src="js/Reservation.js "></script>
+    </head>
+    
+    <body align="center" border=3 bordercolor="red">
+    <h1>Rental Skates </h1>
+        <div  marginheight = 3>
+             <h1>Category</h1>
+            
+            <input type="text" id="nameCategory" placeholder="Name">
+            <input type="text" id="descriptionCategory" placeholder="Description">
+            
+            <button onclick="MostraInformacionCategory()">Consultar</button>
+            <button onclick="InsertarInformaconCategory()">Insertar</button>
+        </div>
+        
+          <br/> 
+
+        <div id = "resultCategory"></div>
+        
+
+        <br/> 
+<!--°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°  -->
+        <div >
+            <h1>Skate</h1>
+             <input type="text" id="brand" placeholder="Brand">
+             <input type="number" id="year" placeholder="Year">
+             <input type="text" id="name" placeholder="Name">
+             <input type="text" id="description" placeholder="Description">
+           <!--  <input type="text" id="category" placeholder="Category"> -->
+            
+            
+            <button onclick="MostraInformacionSkate()">Consultar</button>
+            <button onclick="InsertarInformacionSkate()">Insertar</button>
+        </div>
+
+        <br/> 
+        
+         <div id = "resultSkate"></div>
+        
+        <br/> 
+
+ <!--°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°-->
+     <div>
+         <h1>Client</h1>
+             <input type="text" id="email" placeholder="Email">
+             <input type="number" id="password" placeholder="Password">
+             <input type="text" id="nameClient" placeholder="Name">
+             <input type="number" id="age" placeholder="Age">
+            
+            
+            
+            <button onclick="MostrarInformacionClient()">Consultar</button>
+            <button onclick="InsertarInformacionClient()">Insertar</button>
+        </div>
+    <br/> 
+    <div id = "resultClient"></div>
+    <br/> 
+    
+<!--°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°-->    
+    
+<div>
+         <h1>Message</h1>
+             <input type="text" id="Message" placeholder="Message">        
+            
+            
+            <button onclick="MostrarInformacionMessage()">Consultar</button>
+            <button onclick="InsertarInformacionMessage()">Insertar</button>
+        </div>
+    
+    <br/> 
+    <div id = "resultMessage"></div>
+    <br/> 
+    
+<!--°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°-->    
+    <div>
+         <h1>Reservation</h1>
+             <input type="date"id="startDate" placeholder="Start">
+             <input type="date"id="devolutionDate" placeholder="Devolution">
+             
+            
+            <button onclick="MostrarInformacionReservation()">Consultar</button>
+            <button onclick="InsertarInformacionReservation()">Insertar</button>
+        </div>
+    <br/> 
+    <div id = "resultReservation"></div>
+    <br/> 
+    
+    </body>
+    
+</html>
