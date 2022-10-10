@@ -42,6 +42,9 @@ public class ReservationService {
                 if (reservation.getDevolutionDate() != null) {
                     reservation_update.get().setDevolutionDate(reservation.getDevolutionDate());
                 }
+                if (reservation.getStatus() != null) {
+                    reservation_update.get().setStatus(reservation.getStatus());
+                }
                 return ReservationRepository.saveReservation(reservation_update.get());
             }
         }

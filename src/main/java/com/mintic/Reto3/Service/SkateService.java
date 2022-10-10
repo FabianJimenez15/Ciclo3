@@ -48,6 +48,12 @@ public class SkateService {
                 if (skate.getName() != null) {
                     skate_update.get().setName(skate.getName());
                 }
+                if (skate.getBrand() != null) {
+                    skate_update.get().setBrand(skate.getBrand());
+                }
+                if (skate.getYear() != null) {
+                    skate_update.get().setYear(skate.getYear());
+                }
                 return skateRepository.saveSkate(skate_update.get());
             }
         }

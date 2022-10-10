@@ -36,9 +36,6 @@ public class MessageService {
         if (message.getIdMessage() != null) {
             Optional<Message> message_update = messageRepository.GetMessageId(message.getIdMessage());
             if (!message_update.isEmpty()) {
-                if (message.getIdMessage() != null) {
-                    message_update.get().setIdMessage(message.getIdMessage());
-                }
                 if (message.getMessageText() != null) {
                     message_update.get().setMessageText(message.getMessageText());
                 }
