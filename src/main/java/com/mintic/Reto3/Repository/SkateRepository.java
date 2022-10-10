@@ -24,4 +24,8 @@ public class SkateRepository {
         return  skateCrudRepositoryInterfaz.save(skate);
     }
 
+    public void deleteSkate(Skate skate){
+        skateCrudRepositoryInterfaz.delete(skate);
+    }
+
     }
