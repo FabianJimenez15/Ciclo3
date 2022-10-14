@@ -1,6 +1,8 @@
 package com.mintic.Reto3.Controller;
 
 import com.mintic.Reto3.Model.Reservation;
+import com.mintic.Reto3.Model.Custom.CountClient;
+import com.mintic.Reto3.Model.Custom.StatusAmount;
 import com.mintic.Reto3.Service.ReservationService;
 import java.util.List;
 import java.util.Optional;
@@ -50,5 +52,20 @@ public class ReservationController {
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public boolean deleteReservation (@PathVariable("id")Integer reservationId){
         return ReservationService.deleteReservation(reservationId);
+    }
+
+    @GetMapping("/report-status")
+    public StatusAmount getStatusAmountStatus(){
+        return ReservationService.getStatusReport();
+    }
+
+    @GetMapping("/report-clients")
+    public List <CountClient> getCountClient(){
+            return ReservationService.getTopClient();
+    }
+
+    @GetMapping("/report-dates/{dateOne}/{dateTwo}")
+    public List <Reservation> getDateReport(@PathVariable("dateOne")String d1, @PathVariable("dateTwo")String d2){
+         return ReservationService.getReservationPeriod(d1, d2);
     }
 }
